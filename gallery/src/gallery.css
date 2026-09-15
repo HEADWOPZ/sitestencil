@@ -9,12 +9,12 @@
 
 .ss-demo-switch a {
   font-family: var(--ss-font-hud);
-  font-size: var(--ss-size-micro);
-  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ss-ink-muted);
   border: 1px solid var(--ss-mortar);
-  padding: 0.35rem 0.55rem;
+  padding: 0.4rem 0.65rem;
 }
 
 .ss-demo-switch a[data-active="true"] {

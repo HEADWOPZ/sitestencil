@@ -80,19 +80,15 @@ a:hover {
 
 .ss-brick {
   position: relative;
-  background-color: var(--ss-brick-900);
+  background-color: #4a2a1c;
   background-image:
-    linear-gradient(180deg, rgba(8, 5, 4, 0.55), rgba(8, 5, 4, 0.2) 40%, rgba(8, 5, 4, 0.72)),
-    repeating-linear-gradient(
-      90deg,
-      #3a2418 0 56px,
-      #1c120e 56px 60px
-    ),
-    repeating-linear-gradient(
-      #4a2e20 0 26px,
-      #1a100c 26px 30px
-    );
-  background-size: auto, 120px 60px, 120px 60px;
+    radial-gradient(ellipse at 18% 0%, rgba(61, 255, 243, 0.14), transparent 40%),
+    radial-gradient(ellipse at 92% 8%, rgba(255, 43, 214, 0.12), transparent 38%),
+    linear-gradient(180deg, rgba(8, 5, 4, 0.28), rgba(8, 5, 4, 0.12) 35%, rgba(8, 5, 4, 0.42)),
+    linear-gradient(#1a100c 7px, transparent 7px) 0 0 / 112px 38px,
+    linear-gradient(90deg, #1a100c 7px, transparent 7px) 0 0 / 112px 38px,
+    linear-gradient(#1a100c 7px, transparent 7px) 56px 19px / 112px 38px,
+    linear-gradient(90deg, #1a100c 7px, transparent 7px) 56px 19px / 112px 38px;
 }
 
 .ss-brick::after {
@@ -100,8 +96,11 @@ a:hover {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 20% 0%, rgba(61, 255, 243, 0.08), transparent 42%),
-    radial-gradient(ellipse at 90% 10%, rgba(255, 43, 214, 0.07), transparent 38%);
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08) 0 1px,
+    transparent 1px 4px
+  );
 }
 
 .ss-scanlines {
@@ -285,7 +284,7 @@ a:hover {
   -webkit-backdrop-filter: blur(var(--ss-glass-blur)) saturate(140%);
   border: 1px solid var(--ss-border-cyan);
   border-radius: var(--ss-radius-card);
-  box-shadow: var(--ss-glow-cyan), inset 0 1px 0 rgba(244, 237, 228, 0.08);
+  box-shadow: var(--ss-glow-cyan), inset 0 1px 0 rgba(244, 237, 228, 0.1);
 }
 
 .ss-corners {
@@ -296,10 +295,11 @@ a:hover {
 .ss-corners::after {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
-  border: 1px solid var(--ss-gold);
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--ss-gold);
   pointer-events: none;
+  z-index: 1;
 }
 
 .ss-corners::before {
