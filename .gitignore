@@ -1,0 +1,11 @@
+node_modules/
+dist/
+gallery/dist/
+gallery/node_modules/
+.DS_Store
+*.log
+coverage/
+.tmp/
+.sitestencil-out/
+.env
+.env.local
