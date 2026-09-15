@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "sitestencil": {
+      "command": "npx",
+      "args": ["tsx", "src/mcp.ts"],
+      "cwd": "."
+    }
+  }
+}

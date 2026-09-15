@@ -1,0 +1,67 @@
+{
+  "name": "sitestencil",
+  "version": "0.1.0",
+  "description": "Street-tech design skill + MCP for DeFi and wallet landings. Dark brick, cyan-gold-magenta neon, HUD — not purple SaaS.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Kevin Lance Murray",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HEADWOPZ/sitestencil.git"
+  },
+  "homepage": "https://github.com/HEADWOPZ/sitestencil#readme",
+  "bugs": {
+    "url": "https://github.com/HEADWOPZ/sitestencil/issues"
+  },
+  "keywords": [
+    "defi",
+    "wallet",
+    "design-system",
+    "mcp",
+    "claude",
+    "hermes",
+    "street-tech",
+    "neon",
+    "hud"
+  ],
+  "bin": {
+    "sitestencil": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.ts",
+      "import": "./dist/mcp.js"
+    }
+  },
+  "files": [
+    "dist",
+    "skill",
+    "src/css",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc && mkdir -p dist/css && cp src/css/sitestencil.css dist/css/",
+    "sitestencil": "tsx src/cli.ts",
+    "mcp": "tsx src/mcp.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "gallery:dev": "npm run dev --prefix gallery",
+    "gallery:build": "npm run build --prefix gallery",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

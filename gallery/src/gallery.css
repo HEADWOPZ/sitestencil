@@ -1,0 +1,32 @@
+.ss-demo-switch {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0.75rem 0 0;
+}
+
+.ss-demo-switch a {
+  font-family: var(--ss-font-hud);
+  font-size: var(--ss-size-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ss-ink-muted);
+  border: 1px solid var(--ss-mortar);
+  padding: 0.35rem 0.55rem;
+}
+
+.ss-demo-switch a[data-active="true"] {
+  color: var(--ss-gold);
+  border-color: var(--ss-gold);
+}
+
+.ss-index-lead {
+  padding: 3.5rem 0 1rem;
+}
+
+.ss-index-lead p {
+  max-width: 36rem;
+  color: var(--ss-ink-muted);
+}
